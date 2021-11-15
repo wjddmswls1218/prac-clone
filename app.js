@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const path = require("path");
 const db = require("./db");
 const session = require("express-session");
+const globalRouter = require("./routers/globalRouter");
 
 dotenv.config();
 

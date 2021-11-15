@@ -4,8 +4,16 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title test base
+        link(rel="stylesheet", href="/assets/styles.css")
     body
         header.header
+            ul.menus
+                li.menus__item
+                    a(href="/board/list") BOARD
+                li.meuns__item
+                    a(href="/logout") LOGOUT
+                li.meuns__item
+                    a(href="/")
 
         block content
 
