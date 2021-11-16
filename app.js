@@ -5,6 +5,7 @@ const path = require("path");
 const db = require("./db");
 const session = require("express-session");
 const globalRouter = require("./routers/globalRouter");
+const boardRouter = require("./routers/boardRouter");
 
 dotenv.config();
 
@@ -18,6 +19,9 @@ app.use(
     saveUninitialized: true,
   })
 );
+
+app.use("/", globalRouter);
+app.use("/board", boardRouter);
 
 app.set("view engine", "pug");
 app.use(morgan(`dev`));
